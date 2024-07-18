@@ -1,16 +1,28 @@
 ---
-
+import Header from "../components/header/Header.astro";
 ---
 
 <html lang="fr">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Portfolio de Mickael</title>
+		<meta
+			name="description"
+			content="Mickael Sanches Loureiro Développeur FullStack."
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://mickaelsanchesloureiro.netlify.app/" />
+		<meta property="og:site_name" content="Mickael Sanches Loureiro" />
+		<meta property="og:title" content="Mickael Sanches Loureiro Portfolio" />
+	
+		<script
+			src="https://kit.fontawesome.com/2898a0ac51.js"
+			crossorigin="anonymous"></script>
+		<title>Portfolio | Mickael Sanches Loureiro</title>
 	</head>
 	<body>
-		<h1>Portfolio</h1>
+		<Header />
 	</body>
 </html>
