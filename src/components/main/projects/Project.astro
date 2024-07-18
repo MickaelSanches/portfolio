@@ -9,7 +9,7 @@ export interface Props {
   title: string;
   img: string;
   description: string;
-  technologies?: Technology[];
+  technologies: Technology[];
   link: string;
 }
 
@@ -24,15 +24,13 @@ const { technologies, title, img, description, link } = Astro.props;
   </p>
   <p class="title-technologies">Technologies utilisées</p>
   <div class="container-technologies">
-    {
-      technologies.map(({ icon }) => {
-        const IconComponent = getIconComponent(icon);
-        return <i>{IconComponent && <IconComponent />}</i>;
-      })
-    }
+    {technologies.map(({ icon }) => {
+      const IconComponent = getIconComponent(icon || '');
+      return <i>{IconComponent && <IconComponent />}</i>;
+    })}
   </div>
   <div class="container-link-project">
-    <a href={link} target="_blank">Voir Plus</a>
+    <a href={link} target="_blank">Voir plus</a>
   </div>
 </li>
 
