@@ -12,7 +12,7 @@ import IconShadcn from "./IconShadcn.astro";
 import IconNodeJs from "./IconNodeJs.astro";
 
 interface IconType {
-    [key: string]: any;
+  [key: string]: (_props: Record<string, any>) => any;
 }
 
 export const ICONS = {

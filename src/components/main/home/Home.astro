@@ -93,7 +93,7 @@ import photoprofil from "../../../../public/Photo-CV.jpg";
   const letters = document.querySelectorAll(".p-profesion");
   letters.forEach((letter) => {
     letter.addEventListener("mouseenter", () => {
-      toogle(letter);
+      toogle(letter as HTMLElement);
     });
   });
 
