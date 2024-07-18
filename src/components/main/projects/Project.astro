@@ -25,7 +25,9 @@ const { technologies, title, img, description, link } = Astro.props;
   <p class="title-technologies">Technologies utilisées</p>
   <div class="container-technologies">
     {technologies && technologies.map(({ icon }) => {
+      console.log("Icon:", icon); // Log pour vérifier les valeurs d'icône
       const IconComponent = getIconComponent(icon || '');
+      console.log("IconComponent:", IconComponent); // Log pour vérifier les composants d'icône
       return <i>{IconComponent && <IconComponent />}</i>;
     })}
   </div>

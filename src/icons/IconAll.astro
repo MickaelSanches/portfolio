@@ -15,21 +15,21 @@ interface IconType {
   [key: string]: (_props: Record<string, any>) => any;
 }
 
-export const ICONS = {
-    html: IconHtml,
-    css: IconCss,
-    javaScript: IconJavaScript,
-    react: IconReact,
-    astro: IconAstro,
-    tailwind: IconTailwind,
-    typeScript: IconTypeScript,
-    git: IconGit,
-    github: IconGitHub,
-    shadcn: IconShadcn,
-    nodejs: IconNodeJs,
+const ICONS: IconType = {
+  html: IconHtml,
+  css: IconCss,
+  javaScript: IconJavaScript,
+  react: IconReact,
+  astro: IconAstro,
+  tailwind: IconTailwind,
+  typeScript: IconTypeScript,
+  git: IconGit,
+  github: IconGitHub,
+  shadcn: IconShadcn,
+  nodejs: IconNodeJs,
 };
 
-export function getIconComponent(iconName: string) {
-    return ICONS[iconName] || null;
+export function getIconComponent(iconName: string): ((_props: Record<string, any>) => any) | null {
+  return ICONS[iconName] || null;
 }
 ---
