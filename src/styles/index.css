@@ -21,12 +21,12 @@ body {
 }
 
 html::-webkit-scrollbar {
-    background-color: #46465e;
+    background-color: #0B0388;
     width: 10px;
 }
 
 html::-webkit-scrollbar-thumb {
-    background-color: #01be96;
+    background-color: #4C43E9;
     border-radius: 20px;
     width: 10px;
 }

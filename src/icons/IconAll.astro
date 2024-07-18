@@ -1,0 +1,34 @@
+---
+import IconAstro from "./IconAstro.astro";
+import IconTailwind from "./IconTailwind.astro";
+import IconTypeScript from "./IconTypeScript.astro";
+import IconHtml from "./IconHtml.astro";
+import IconCss from "./IconCss.astro";
+import IconReact from "./IconReact.astro";
+import IconGit from "./IconGit.astro";
+import IconGitHub from "./IconGitHub.astro";
+import IconJavaScript from "./IconJavaScript.astro";
+import IconShadcn from "./IconShadcn.astro";
+import IconNodeJs from "./IconNodeJs.astro";
+
+export const ICONS = {
+    html: IconHtml,
+    css: IconCss,
+    javaScript: IconJavaScript,
+    react: IconReact,
+    astro: IconAstro,
+    tailwind: IconTailwind,
+    typeScript: IconTypeScript,
+    git: IconGit,
+    github: IconGitHub,
+    shadcn: IconShadcn,
+    nodejs: IconNodeJs,
+  // add new icons here <--
+  // Make sure that when calling the icon the key is the same
+  // "optional" in the IconKeys const file adds the icon key for when you call IconKeys.nameIcon
+};
+
+export function getIconComponent(iconName: string) {
+    return ICONS[iconName] || null;
+}
+---
