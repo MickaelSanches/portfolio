@@ -11,6 +11,10 @@ import IconJavaScript from "./IconJavaScript.astro";
 import IconShadcn from "./IconShadcn.astro";
 import IconNodeJs from "./IconNodeJs.astro";
 
+interface IconType {
+  [key: string]: any;
+}
+
 export const ICONS = {
     html: IconHtml,
     css: IconCss,
@@ -28,7 +32,7 @@ export const ICONS = {
   // "optional" in the IconKeys const file adds the icon key for when you call IconKeys.nameIcon
 };
 
-export function getIconComponent(iconName: string) {
+export function getIconComponent(iconName) {
     return ICONS[iconName] || null;
 }
 ---
