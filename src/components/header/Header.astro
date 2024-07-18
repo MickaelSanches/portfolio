@@ -42,6 +42,7 @@
       const $linea1 = document.querySelector("#line1");
       const $linea2 = document.querySelector("#line2");
       const $linea3 = document.querySelector("#line3");
+      if ($btnmenu && $menuDrop && $menu && $linea1 && $linea2 && $linea3) {
       $btnmenu.addEventListener("click", () => {
         $linea1.classList.toggle("activeline1__bars-menu");
         $linea2.classList.toggle("activeline2__bars-menu");
@@ -49,7 +50,7 @@
         $menu.classList.toggle("menu-active");
         $menuDrop.classList.toggle("active-menu-drop");
       });
-  
+
       $menuDrop.addEventListener("click", () => {
         $linea1.classList.toggle("activeline1__bars-menu");
         $linea2.classList.toggle("activeline2__bars-menu");
@@ -57,6 +58,7 @@
         $menu.classList.toggle("menu-active");
         $menuDrop.classList.toggle("active-menu-drop");
       });
+    }
     </script>
   </header>
   
