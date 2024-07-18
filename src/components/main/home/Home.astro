@@ -8,7 +8,6 @@ import photoprofil from "../../../../public/Photo-CV.jpg";
   <div class="linear-gradient-1"></div>
   <dir class="container-persentation">
     <div class="container-text">
-      <!-- <h2 class="text-hello">Hola <strong>soy</strong></h2> -->
       <h2 class="text-name">Mickael Sanches Loureiro</h2>
       <div class="container-profession">
         <div>
@@ -81,7 +80,7 @@ import photoprofil from "../../../../public/Photo-CV.jpg";
       </div>
     </div>
     <div class="container-photo-profile">
-      <div class="photo-perfil">
+      <div class="photo-profil">
         <picture>
           <Image src={photoprofil} alt="Mickael Sanches Loureiro" id="inicio" />
         </picture>
@@ -98,7 +97,7 @@ import photoprofil from "../../../../public/Photo-CV.jpg";
     });
   });
 
-  function toogle(letter) {
+  function toogle(letter: HTMLElement) {
     letter.classList.add("bouncing");
     letter.addEventListener("animationend", () => {
       letter.classList.remove("bouncing");
@@ -297,7 +296,7 @@ import photoprofil from "../../../../public/Photo-CV.jpg";
     justify-content: center;
   }
 
-  .photo-perfil {
+  .photo-profil {
     position: relative;
     display: flex;
     justify-content: center;
@@ -315,7 +314,7 @@ import photoprofil from "../../../../public/Photo-CV.jpg";
     /* border-radius: 64% 36% 29% 71% / 59% 79% 21% 41%; */
   }
 
-  .photo-perfil img {
+  .photo-profil img {
     position: relative;
     display: block;
     object-fit: cover;
@@ -325,7 +324,7 @@ import photoprofil from "../../../../public/Photo-CV.jpg";
     transition: 0.3s;
   }
 
-   {
+  {
     /* responsive*/
   }
   @media (max-width: 900px) {
@@ -341,7 +340,7 @@ import photoprofil from "../../../../public/Photo-CV.jpg";
       justify-items: center;
       margin: 0;
     }
-    .photo-perfil {
+    .photo-profil {
       margin: 0;
     }
     .container-text {
