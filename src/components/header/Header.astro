@@ -1,48 +1,50 @@
 <header class="header">
-    <h1 id="accueil">Portfolio</h1>
-    <nav class="nav">
-      <ul class="ul-nav">
-        <a href="#accueil">
-          <li class="li-nav">Accueil</li>
-        </a>
-  
-        <a href="#projets">
-          <li class="li-nav">Projets</li>
-        </a>
-  
-        <a href="#hardskills">
-          <li class="li-nav">Hard Skills</li>
-        </a>
-        <a href="#études">
-          <li class="li-nav">Études</li>
-        </a>
-        <a href="#àpropos">
-          <li class="li-nav">À propos</li>
-        </a>
-  
-        <a href="#contact">
-          <li class="li-nav">Contact</li>
-        </a>
-      </ul>
-    </nav>
-    <div class="container-bnt-menu">
-      <div class="btn-menu">
-        <span class="line-menu" id="line1"></span>
-        <span class="line-menu" id="line2"></span>
-        <span class="line-menu" id="line3"></span>
-      </div>
+  <a href="#accueil">
+    <img src="/LogoMike.png" alt="Logo de Mickael Sanches Loureiro" id="accueil-logo" class="logo" />
+  </a>
+  <nav class="nav">
+    <ul class="ul-nav">
+      <a href="#accueil">
+        <li class="li-nav">Accueil</li>
+      </a>
+
+      <a href="#projets">
+        <li class="li-nav">Projets</li>
+      </a>
+
+      <a href="#hardskills">
+        <li class="li-nav">Hard Skills</li>
+      </a>
+      <a href="#études">
+        <li class="li-nav">Études</li>
+      </a>
+      <a href="#àpropos">
+        <li class="li-nav">À propos</li>
+      </a>
+
+      <a href="#contact">
+        <li class="li-nav">Contact</li>
+      </a>
+    </ul>
+  </nav>
+  <div class="container-bnt-menu">
+    <div class="btn-menu">
+      <span class="line-menu" id="line1"></span>
+      <span class="line-menu" id="line2"></span>
+      <span class="line-menu" id="line3"></span>
     </div>
-  
-    <div class="menu-drop"></div>
-  
-    <script>
-      const $menu = document.querySelector(".nav");
-      const $menuDrop = document.querySelector(".menu-drop");
-      const $btnmenu = document.querySelector(".btn-menu");
-      const $linea1 = document.querySelector("#line1");
-      const $linea2 = document.querySelector("#line2");
-      const $linea3 = document.querySelector("#line3");
-      if ($btnmenu && $menuDrop && $menu && $linea1 && $linea2 && $linea3) {
+  </div>
+
+  <div class="menu-drop"></div>
+
+  <script>
+    const $menu = document.querySelector(".nav");
+    const $menuDrop = document.querySelector(".menu-drop");
+    const $btnmenu = document.querySelector(".btn-menu");
+    const $linea1 = document.querySelector("#line1");
+    const $linea2 = document.querySelector("#line2");
+    const $linea3 = document.querySelector("#line3");
+    if ($btnmenu && $menuDrop && $menu && $linea1 && $linea2 && $linea3) {
       $btnmenu.addEventListener("click", () => {
         $linea1.classList.toggle("activeline1__bars-menu");
         $linea2.classList.toggle("activeline2__bars-menu");
@@ -59,179 +61,182 @@
         $menuDrop.classList.toggle("active-menu-drop");
       });
     }
-    </script>
-  </header>
-  
-  <style is:global>
+  </script>
+</header>
+
+<style is:global>
+  .header {
+    position: fixed;
+    height: 90px;
+    background-color: #0000009f;
+    width: 100%;
+    padding: 20px 20px;
+    color: #f6f6f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 auto;
+    z-index: 1000;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    height: 250px;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+
+  .nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f6f6f9;
+  }
+
+  .ul-nav {
+    position: relative;
+    display: flex;
+  }
+
+  .ul-nav a {
+    text-decoration: none;
+    color: #f6f6f9;
+  }
+
+  .li-nav {
+    position: relative;
+    list-style: none;
+    color: #f6f6f9;
+    transition: 0.3s;
+    margin: 0 10px;
+    padding: 4px 2px;
+    text-align: center;
+  }
+
+  .li-nav::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    background-color: #0B0388;
+    bottom: -3px;
+  }
+
+  .li-nav:hover::before {
+    width: 100%;
+    transition: 0.4s;
+  }
+
+  .li-nav:hover {
+    color: #4C43E9;
+  }
+
+  .container-bnt-menu {
+    display: none;
+  }
+
+  .menu-drop {
+    display: none;
+  }
+
+  /* responsive */
+  @media (max-width: 720px) {
+    .menu-drop {
+      display: block;
+    }
+    .container-bnt-menu {
+      display: block;
+    }
     .header {
       position: fixed;
-      height: 80px;
-      background-color: #0000009f;
-      width: 100%;
-      padding: 20px 20px;
-      color: #f6f6f9;
       display: flex;
+      justify-items: center;
       justify-content: space-between;
-      overflow: hidden;
-
-      margin: 0 auto;
-      z-index: 1000;
+      top: 0;
+      left: 0;
+      z-index: 100;
     }
-    .header h1 {
-      display: inline-block;
+    .container-bnt-menu {
       position: relative;
-      z-index: 20;
+      padding: 0px 20px;
+      z-index: 9999;
+    }
+    .line-menu {
+      display: block;
+      position: relative;
+      height: 2px;
+      width: 40px;
+      background-color: #f6f6f9;
+      top: -5px;
+      margin-top: 10px;
+      cursor: pointer;
+      transform-origin: 0px 100%;
+      transition: all 0.4s;
+    }
+    .activeline1__bars-menu {
+      transform: rotate(40deg) translate(-2px, 1px);
+    }
+    .activeline2__bars-menu {
+      opacity: 0;
+      margin-left: -30px;
+    }
+    .activeline3__bars-menu {
+      transform: rotate(-40deg) translate(-2px, 1px);
     }
     .nav {
-      position: relative;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: #f6f6f9;
+      position: fixed;
+      flex-direction: column;
+      background: #111111;
+      width: auto;
+      height: 100vh;
+      right: -300px;
+      top: 80px;
+      transition: right 0.4s ease-in-out;
+      z-index: 100;
     }
-    .ul-nav {
-      position: relative;
-      display: flex;
-    }
-  
-    .ul-nav a {
-      text-decoration: none;
-      color: #f6f6f9;
-    }
+
     .li-nav {
-      position: relative;
-      list-style: none;
-      color: #f6f6f9;
-      transition: 0.3s;
-      margin: 0 10px;
-      padding: 4px 2px;
+      padding: 30px 80px;
       text-align: center;
-    }
-    .li-nav::before {
-      content: "";
-      position: absolute;
-      height: 2px;
-      width: 0%;
-      background-color: #0B0388;
-      bottom: -3px;
-    }
-    .li-nav:hover::before {
       width: 100%;
-      transition: 0.4s;
+      margin: 0;
     }
     .li-nav:hover {
-      color: #4C43E9;
+      background-color: #4c43e9;
+      color: #000;
     }
-  
-    .container-bnt-menu {
-      display: none;
+    .li-nav:hover::before {
+      content: "";
+      width: 0;
+      height: 0;
     }
-  
+    .menu-active {
+      right: 0px;
+      transition: right 0.4s ease-in-out;
+    }
     .menu-drop {
+      top: 0;
+      left: 0;
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 20;
       display: none;
     }
-    /* responsive */
-  
-    @media (max-width: 720px) {
-      .menu-drop {
-        display: block;
-      }
-      .container-bnt-menu {
-        display: block;
-      }
-      .header {
-        position: fixed;
-        display: flex;
-  
-        justify-items: center;
-        justify-content: space-between;
-        top: 0;
-        left: 0;
-        z-index: 100;
-        /* background: rgba(255,255,255,0.1);
-          -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px); */
-      }
-      h1 {
-        display: inline-block;
-      }
-      .container-bnt-menu {
-        position: relative;
-        padding: 0px 20px;
-        z-index: 9999;
-      }
-      .line-menu {
-        display: block;
-        position: relative;
-        height: 2px;
-        width: 40px;
-        background-color: #f6f6f9;
-        top: -5px;
-        margin-top: 10px;
-        cursor: pointer;
-        transform-origin: 0px 100%;
-        transition: all 0.4s;
-      }
-      .activeline1__bars-menu {
-        transform: rotate(40deg) translate(-2px, 1px);
-      }
-      .activeline2__bars-menu {
-        opacity: 0;
-        margin-left: -30px;
-      }
-      .activeline3__bars-menu {
-        transform: rotate(-40deg) translate(-2px, 1px);
-      }
-      .nav {
-        position: fixed;
-        flex-direction: column;
-        background: #111111;
-        width: auto;
-        height: 100vh;
-        right: -300px;
-        top: 80px;
-        transition: right 0.4s ease-in-out;
-        z-index: 100;
-      }
-  
-      .li-nav {
-        padding: 30px 80px;
-        text-align: center;
-        width: 100%;
-        margin: 0;
-        
-      }
-      .li-nav:hover {
-        background-color: #4C43E9;
-        color : #000
-      }
-      .li-nav:hover::before {
-        content: "";
-        width: 0;
-        height: 0;
-      }
-  
-      .menu-active {
-        right: 0px;
-        transition: right 0.4s ease-in-out;
-      }
-      .menu-drop {
-        top: 0;
-        left: 0;
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 20;
-        display: none;
-      }
-      .active-menu-drop {
-        display: block;
-        transition: 0.5s display;
-      }
-      .ul-nav {
-        flex-direction: column;
-        width: 100%;
-      }
+    .active-menu-drop {
+      display: block;
+      transition: 0.5s display;
     }
-  </style>
+    .ul-nav {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+</style>
