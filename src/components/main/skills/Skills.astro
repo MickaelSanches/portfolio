@@ -1,6 +1,16 @@
 ---
 import { skills } from "../../../const/const";
-import { getIconComponent } from "../../../icons/IconAll.astro";
+import IconAstro from "../../../icons/IconAstro.astro";
+import IconTailwind from "../../../icons/IconTailwind.astro";
+import IconTypeScript from "../../../icons/IconTypeScript.astro";
+import IconHtml from "../../../icons/IconHtml.astro";
+import IconCss from "../../../icons/IconCss.astro";
+import IconReact from "../../../icons/IconReact.astro";
+import IconGit from "../../../icons/IconGit.astro";
+import IconGitHub from "../../../icons/IconGitHub.astro";
+import IconJavaScript from "../../../icons/IconJavaScript.astro";
+import IconShadcn from "../../../icons/IconShadcn.astro";
+import IconNodeJs from "../../../icons/IconNodeJs.astro";
 ---
 
 <section class="section-skill">
@@ -8,17 +18,24 @@ import { getIconComponent } from "../../../icons/IconAll.astro";
   <div class="container-skill">
     <h2 class="title-skills" id="hardskills">Hard Skills</h2>
     <ul class="ul-skill">
-      {
-        skills.map(({ icon, title }) => {
-          const IconComponent = getIconComponent(icon);
-          return (
-            <li class="li-skills">
-              {IconComponent && <IconComponent />}
-              <p class="p-skill">{title}</p>
-            </li>
-          );
-        })
-      }
+      {skills.map(({ icon, title }) => {
+        return (
+          <li class="li-skills">
+            {icon === 'html' && <IconHtml />}
+            {icon === 'css' && <IconCss />}
+            {icon === 'javaScript' && <IconJavaScript />}
+            {icon === 'react' && <IconReact />}
+            {icon === 'astro' && <IconAstro />}
+            {icon === 'tailwind' && <IconTailwind />}
+            {icon === 'typeScript' && <IconTypeScript />}
+            {icon === 'git' && <IconGit />}
+            {icon === 'github' && <IconGitHub />}
+            {icon === 'shadcn' && <IconShadcn />}
+            {icon === 'nodejs' && <IconNodeJs />}
+            <p class="p-skill">{title}</p>
+          </li>
+        );
+      })}
     </ul>
   </div>
 </section>
