@@ -95,7 +95,7 @@ export const skills = [
 
 export const projects = [
     {
-        img: "../../../img/O’Coloc.png",
+        img: "../../../img/O’Coloc.webp",
         title: "Cohabit",
         link: "https://o-coloc-front.onrender.com/",
         description: `Projet d'école - Développeur back-end & Lead dev back`,
@@ -118,7 +118,7 @@ export const projects = [
         ],
     },
     {
-        img: "../../../img/MCS.png",
+        img: "../../../img/MCS.webp",
         title: "Mon Comptoir Secret",
         link: "",
         description: `À venir`,
@@ -126,7 +126,7 @@ export const projects = [
         ],
     },
     {
-        img: "../../../img/ASAP.png",
+        img: "../../../img/ASAP.webp",
         title: "ASAP",
         link: "",
         description: `À venir`,
@@ -134,7 +134,7 @@ export const projects = [
         ],
     },
     {
-        img: "../../../img/JL.jpg",
+        img: "../../../img/JL.webp",
         title: "Jimmy Lalin - Boxeur Professionnel",
         link: "",
         description: `À venir`,
@@ -142,7 +142,7 @@ export const projects = [
         ],
     },
     {
-        img: "../../../img/NovaPay.png",
+        img: "../../../img/NovaPay.webp",
         title: "NovaPay",
         link: "",
         description: `Projet`,
@@ -150,7 +150,7 @@ export const projects = [
         ],
     },
     {
-        img: "../../../img/Snap Games.png",
+        img: "../../../img/Snap-Games.webp",
         title: "Snap",
         link: "",
         description: `Projet`,
