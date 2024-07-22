@@ -28,6 +28,9 @@ export const IconKeys = {
     github: "github",
     shadcn: "shadcn",
     nodejs: "nodejs",
+    solana: "solana",
+    rust: "rust",
+    anchor: "anchor",
 };
 
 export const skills = [
@@ -75,6 +78,18 @@ export const skills = [
     {
         title: "Shadcn UI",
         icon: IconKeys.shadcn,
+    },
+    {
+        title: "Solana",
+        icon: IconKeys.solana,
+    },
+    {
+        title: "Rust",
+        icon: IconKeys.rust,
+    },
+    {
+        title: "Anchor",
+        icon: IconKeys.anchor,
     },
 ];
 

@@ -11,6 +11,9 @@ import IconGitHub from "../../../icons/IconGitHub.astro";
 import IconJavaScript from "../../../icons/IconJavaScript.astro";
 import IconShadcn from "../../../icons/IconShadcn.astro";
 import IconNodeJs from "../../../icons/IconNodeJs.astro";
+import IconSolana from "../../../icons/IconSolana.astro";
+import IconRust from "../../../icons/IconRust.astro";
+import IconAnchor from "../../../icons/IconAnchor.astro";
 ---
 
 <section class="section-skill">
@@ -32,6 +35,9 @@ import IconNodeJs from "../../../icons/IconNodeJs.astro";
             {icon === 'github' && <IconGitHub />}
             {icon === 'shadcn' && <IconShadcn />}
             {icon === 'nodejs' && <IconNodeJs />}
+            {icon === 'solana' && <IconSolana />}
+            {icon === 'rust' && <IconRust />}
+            {icon === 'anchor' && <IconAnchor />}
             <p class="p-skill">{title}</p>
           </li>
         );
