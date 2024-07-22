@@ -45,6 +45,7 @@ import photoprofil from "../../../../public/Photo-CV.jpg";
         </div>
       </div>
       Fort de mon expertise en développement et de mon souci constant du détail, je crée des solutions innovantes qui placent les utilisateurs au cœur de la conception. En dehors de mon travail, je suis passionné par la nature, les jeux vidéo, et l'univers en pleine évolution du Web3.
+
       <div class="container-curriculum">
         <a href="https://wa.me/+33763680304" target="_blank" class="a-action"
           >Me Contacter</a
@@ -108,6 +109,7 @@ import photoprofil from "../../../../public/Photo-CV.jpg";
     position: relative;
     width: 100%;
     height: 100%;
+    padding-top: 80px;
   }
   .linear-gradient-1 {
     position: absolute;
@@ -137,6 +139,24 @@ import photoprofil from "../../../../public/Photo-CV.jpg";
     );
     z-index: 0;
   }
+
+  .linear-gradient-1, .linear-gradient-2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.linear-gradient-1 {
+    left: 0;
+    top: 0;
+    background: radial-gradient(at left center, rgba(11, 3, 136, 100), transparent, transparent);
+}
+
+.linear-gradient-2 {
+    right: 0;
+    top: 0;
+    background: radial-gradient(at right center, rgba(76, 67, 233, 100), rgb(0, 0, 0), rgb(0, 0, 0));
+}
 
   .container-persentation {
     position: relative;
@@ -352,13 +372,48 @@ import photoprofil from "../../../../public/Photo-CV.jpg";
     }
   }
 
-  @media (max-width: 500px) {
+@media (max-width: 550px) {
+  .container-presentation {
+        flex-direction: column-reverse;
+        height: auto;
+        gap: 30px;
+        padding-top: 100px;
+        width: 100%;
+    }
+    .container-photo-profile {
+        width: 100%;
+        justify-content: center;
+        justify-items: center;
+        margin: 0;
+    }
+    .photo-perfil {
+        margin: 0;
+        height: 150px;
+        width: 150px;
+    }
+    .container-text {
+        width: 100%;
+        text-align: center;
+    }
+    .text-name {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .container-profession {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    .p-presentation {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
     .container-curriculum {
-      display: flex;
-      gap: 10px;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
     }
-    .linear-gradient-1 {
-      display: none;
-    }
-  }
+}
+
 </style>
