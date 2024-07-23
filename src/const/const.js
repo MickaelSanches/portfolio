@@ -101,6 +101,9 @@ export const projects = [
         description: `Projet d'école - Développeur back-end & Lead dev back`,
         technologies: [
             {
+                icon: IconKeys.react,
+            },
+            {
                 icon: IconKeys.typeScript,
             },
             {
