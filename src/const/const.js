@@ -123,16 +123,43 @@ export const projects = [
     {
         img: "../../../img/MCS.webp",
         title: "Mon Comptoir Secret",
-        link: "",
-        description: `À venir`,
+        link: "https://moncomptoirsecret.com/",
+        description: `Site pour un institut de beauté`,
         technologies: [
+            {
+                icon: IconKeys.react,
+            },
+            {
+                icon: IconKeys.typeScript,
+            },
+            {
+                icon: IconKeys.nodejs,
+            },
+            {
+                icon: IconKeys.tailwind,
+            },
+            {
+                icon: IconKeys.javaScript,
+            },
+            {
+                icon: IconKeys.astro,
+            },
+            {
+                icon: IconKeys.html,
+            },
+            {
+                icon: IconKeys.css,
+            },
+            {
+                icon: IconKeys.github,
+            },
         ],
     },
     {
         img: "../../../img/ASAP.webp",
         title: "ASAP",
         link: "",
-        description: `À venir`,
+        description: `En construction`,
         technologies: [
         ],
     },
